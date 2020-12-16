@@ -1,0 +1,127 @@
+
+.aboutus{
+  padding: 100px 0px 82px;
+  height: 450px;
+  color: #6c757d!important;
+}
+.FACILITIES{
+ 
+  height: 80px;
+}
+.FACILITIES h2{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.aboutus h2{
+  font-size: 50px;
+  font-weight: bold;
+}
+.rowsetting{
+  margin: 80px 0px !important;
+}
+.imgsetting{
+border-radius: 50px;
+height: 100px;
+width: 100px;
+}
+.fa-bicycle{
+margin-top: 22px;
+}
+.fa-book {
+  margin-top: 24px;
+}
+.fa-user-circle-o{
+  margin-top: 27px;
+}
+.rowsetting p{
+  padding: 10px;
+  color: #6c757d!important;
+  }
+.rowsetting h3{
+ margin-top: 20px;
+ font-weight: bold;
+  font-size: 30px;
+  }
+/*responsive*/
+
+@media (min-width: 992px;){
+#popup{
+  width: auto;
+  height: auto;
+
+}
+}
+@media (min-width: 768px;) and (max-width: 991px){
+#popup{
+  width: auto;
+  height: auto;
+
+}
+}
+@media (min-width:575px;) and (max-width: 767px ;){
+#popup{
+  width: auto;
+  height: auto;
+ 
+}
+}
+@media (min-width:400px;) and (max-width:734px ;){
+.carousel-caption p{
+  font-size: 8px;
+}
+#popup{
+  width: auto;
+  height: auto;
+ }
+}
+@media (max-width: 479px;){
+.aboutus{
+
+  height: 450px;
+}
+#popup{
+  width: auto;
+  height: auto;
+  
+}
+.FACILITIES{
+
+  height: 800px;
+}
+}
+#popupMain{
+  position: fixed;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.6) ;
+z-index: 1001;
+}
+
+#popup{
+  width: 50%;
+  height: 70%;
+  background-image: url('https://www.lubinutravel.com/uploads/0000/29/2020/07/27/3778945.jpg');
+  background-size: cover;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% , -50%);
+box-shadow: 2px 2px 5px 3px rgba(255, 255, 255, 0.973);
+text-align: right;
+}
+.submitid{
+  width:8% ;
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: #0db9d3;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin-top: 1px;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

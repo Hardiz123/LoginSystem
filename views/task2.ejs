@@ -1,0 +1,198 @@
+<html>
+
+<head>
+<title>Welcome to HMRKJ</title>
+ <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type='text/javaScript'>
+function do()
+{
+document.write("Your leave has been submited. The status will be shared soon.")
+}
+</script>
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: grey;
+   color: white;
+   text-align: center;
+}
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    width: 100%;
+  }
+    
+  
+  td, th {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 6px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+</style>
+</head>
+<body>
+  <div id="popupMain" style="display : none">
+    <div id="popup">
+
+<button class="submitid"> Close  </button>
+
+    </div>
+  </div>
+<div class="bgimg">
+<nav class="navbar navbar-inverse navbar-expand-md bg-dark navbar-dark navbar-fixed-top">
+
+<div class="container navbar-header">
+<a href="" class="navbar-brand">
+
+<img src="1.png" class="img-circle" style="width:35px; "></a>
+ 
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+ <span class="navbar-toggler-icon"> </span>
+</button>
+<div class="collapse navbar-collapse text-center text-white" id="collapsenavbar">
+<ul class="nav navbar-nav">
+      <li><a href="main">Home</a></li>
+      <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Student Info</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Complete Info</a></li>
+          <li><a href="task2">Apply Duty/Medical Leave</a></li>
+          <li><a href="#">Parent Information</a></li>
+          <li><a href="#">Display Teacher Comments</a></li>
+          <li><a href="#">Display Institute notices</a></li>
+          <li><a href="#">Display Fine</a></li>
+          <li><a href="#">Display Institute Events</a></li>
+          <li><a href="#">Display Admin Messages</a></li>
+           <li><a href="#">Display Course Wise Topic Report</a></li>
+            <li><a href="#">Display My Exam Schedule</a></li>
+             <li><a href="#">Select Specialization</a></li>
+              <li><a href="#">Course Handouts</a></li>
+       </ul>
+      </li> 
+
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Fee Due</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="payment">Online Net Banking Fee Payment</a></li>
+          <li><a href="phistory">Show Fee Payment History</a></li>
+       
+        </ul>
+      </li>
+      <li><a href="#">Attendance</a></li>
+      <li><a href="#">Time Table</a></li>
+      <li><a href="#">Marks</a></li>
+     
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Online Classes</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Notes</a></li>
+          <li><a href="#">Class Links</a></li>
+          <li><a href="#">Doubt Portal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Others</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Apply Leave</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Registration Form</a></li>
+          <li><a href="#">Gate Pass</a></li>
+          <li><a href="mentor">Mentor</a></li>
+          <li><a href="#">Change Password</a></li>
+         </ul>
+      </li>
+      <li><a href="logout">Log Out</a></li>
+     </ul>
+         
+      </div>
+    </form>   </ul> 
+</div></div>
+</nav>
+<br><br><br>
+<marquee><mark>Student Info >> Apply Duty/Medical leave</mark></marquee>
+<div class="welcome text-center" >
+  <div class="card bg-light text-dark">
+    <div class="card-body"><b><img src="new_avtar1.png" alt="Avatar" class="avatar">Welcome, <%=name%> You can here appy for the duty/medical leave</b></div>
+  </div><br> 
+</div>
+
+  <div class="container">
+    <hr>
+
+    <p> <h4 style="color:#ee6f57">Apply Duty/Medical Leave</h4></p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th colspan="2" style="border: #ee6f57;">PERSONAL DETAILS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Student Name:</th>
+          <td ><%=name%></td>
+        </tr>
+        <tr>
+          <th>Department:</th>
+          <td>Computer Science Department</td>
+        </tr>
+        <tr>
+          <th>Batch:</th>
+          <td>2018-19</td>
+        </tr>
+        
+      </tbody>
+    </table>
+ <form>
+     <fieldset>
+         <legend>Appy Leave</legend>
+  <table>
+   <tr>
+    <td>Full Name :</td>
+    <td><input type="text"></td>
+   </tr>
+   <tr>
+    <td>Time Slot :</td>
+    <td>
+     <input type="radio" name="TimeSlot" id="TimeSlot"> Full-Day
+     <input type="radio" name="TimeSlot" id="TimeSlot"> Period-Wise
+    </td>
+   </tr>
+    <tr>
+        <td>Event:</td>
+        <td><textarea placeholder="please enter the reason of leave here"></textarea>
+    </tr>
+   <tr>
+       <td>Date:</td>
+       <td>From&nbsp;&nbsp;
+       <input type="date" id="mydate" name="date"></td>
+       <td>To&nbsp;&nbsp;<input type="date" id="mydatee" name="datee"></td>
+      </tr>
+   <tr>
+    <td><button onclick="myFunction()">Submit</button></td>
+   </tr>
+  </table>
+     </fieldset>
+ </form>
+
+
+
+
+  </div>
+  <div class="footer">
+    <p>« Powered By HMRKJ Technologies Pvt Ltd »	</p>
+  </div>
+</body>
+</html>

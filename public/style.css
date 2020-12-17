@@ -45,28 +45,28 @@ margin-top: 22px;
   }
 /*responsive*/
 
-@media (min-width: 992px;){
+@media (min-width: 992px){
 #popup{
   width: auto;
   height: auto;
 
 }
 }
-@media (min-width: 768px;) and (max-width: 991px){
+@media (min-width: 768px) and (max-width: 991px){
 #popup{
   width: auto;
   height: auto;
 
 }
 }
-@media (min-width:575px;) and (max-width: 767px ;){
+@media (min-width:575px) and (max-width: 767px ){
 #popup{
   width: auto;
   height: auto;
  
 }
 }
-@media (min-width:400px;) and (max-width:734px ;){
+@media (min-width:400px) and (max-width:734px ){
 .carousel-caption p{
   font-size: 8px;
 }
@@ -75,7 +75,7 @@ margin-top: 22px;
   height: auto;
  }
 }
-@media (max-width: 479px;){
+@media (max-width: 479px){
 .aboutus{
 
   height: 450px;
@@ -101,9 +101,9 @@ z-index: 1001;
 #popup{
   width: 50%;
   height: 70%;
-  background-image: url('https://www.lubinutravel.com/uploads/0000/29/2020/07/27/3778945.jpg');
+  background-image: url('Office-Posters-Coronavirus-Symptoms-791x1024.jpg');
   background-size: cover;
-position: absolute;
+position:inherit;
 top: 50%;
 left: 50%;
 transform: translate(-50% , -50%);

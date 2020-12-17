@@ -1,40 +1,38 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require('express'); //express package
+const bodyParser = require('body-parser'); // body-parser module parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request
 const ejs = require('ejs');
-const mongoose =require('mongoose');
-const session = require('express-session');
-const passport = require('passport')
-const passportLocalMongoose = require('passport-local-mongoose');
+const mongoose =require('mongoose'); //mongodb middleware
+const session = require('express-session'); //current session to stay login 
+const passport = require('passport')// for authentication
+const passportLocalMongoose = require('passport-local-mongoose'); // middleware for mongodb and passport 
 const e = require('express');
 
-const loggedinUser ='';
 const app = express();
-
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs')
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:true})); //Parses the text as URL encoded data, and gives the result on req
 // all this is form the documentation
 app.use(session({
     secret: "Our little secret.",
     resave: false,
     saveUninitialized:false
-}));
+}));//It will create the cookie so that once logged in we don't have to login again unless we close the browser or logOut
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb://localhost:27017/userDB',{useNewUrlParser:true, useUnifiedTopology:true})
+mongoose.connect('mongodb://localhost:27017/userDB',{useNewUrlParser:true, useUnifiedTopology:true}) //setting up mongodb with mongoose middleware
 mongoose.set('useCreateIndex',true);
 const userSchema = new mongoose.Schema ({
     email: String,
     password: String,
     name: String
-});
+}); // schema for mongodb
 
 userSchema.plugin(passportLocalMongoose); //to hash and save the password in the mongodb local database
 
-const User =  new mongoose.model('User',userSchema);
+const User =  new mongoose.model('User',userSchema);//creating user model
 
 passport.use(User.createStrategy());
 
@@ -122,7 +120,6 @@ app.post('/register',function (req,res) {
     User.register({username: req.body.username ,name: req.body.name}, req.body.password, function(err,user) {//as a javscript object
         if(err){
             console.log(err);
-            loggedinUser = req.body.name;
             res.redirect('/register');
             
         } else{

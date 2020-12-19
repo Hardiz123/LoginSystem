@@ -14,7 +14,7 @@ app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended:true})); //Parses the text as URL encoded data, and gives the result on req
 // all this is form the documentation
 app.use(session({
-    secret: "Our little secret.",
+    secret: "Odfgnkan .",
     resave: false,
     saveUninitialized:false
 }));//It will create the cookie so that once logged in we don't have to login again unless we close the browser or logOut
@@ -22,7 +22,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb://localhost:27017/userDB',{useNewUrlParser:true, useUnifiedTopology:true}) //setting up mongodb with mongoose middleware
+mongoose.connect('mongodb://localhost:27017/userDB',) //setting up mongodb with mongoose middleware
 mongoose.set('useCreateIndex',true);
 const userSchema = new mongoose.Schema ({
     email: String,
@@ -129,7 +129,6 @@ app.post('/register',function (req,res) {
         }
     });
 });
-
 app.post('/login', function (req,res) {
 
     const user = new User({
@@ -148,11 +147,6 @@ app.post('/login', function (req,res) {
     })
     
 });
-
-
-
-
-
 
 app.listen(3000,function () {
     console.log("Server started in port 3000.")

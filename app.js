@@ -22,7 +22,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb://localhost:27017/userDB',) //setting up mongodb with mongoose middleware
+mongoose.connect('mongodb://localhost:27017/userDB',{useNewUrlParser:true, useUnifiedTopology:true}) //setting up mongodb with mongoose middleware
 mongoose.set('useCreateIndex',true);
 const userSchema = new mongoose.Schema ({
     email: String,
@@ -129,6 +129,7 @@ app.post('/register',function (req,res) {
         }
     });
 });
+
 app.post('/login', function (req,res) {
 
     const user = new User({
@@ -147,6 +148,11 @@ app.post('/login', function (req,res) {
     })
     
 });
+
+
+
+
+
 
 app.listen(3000,function () {
     console.log("Server started in port 3000.")
